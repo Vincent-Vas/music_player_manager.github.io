@@ -6,6 +6,12 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="./css/input.css"> -->
     <link rel="stylesheet" href="./css/output.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"
+      integrity="sha512-YsR46MmyChktsyMMou+Bs74oCa/CDdwft7rJ5wlnmDzMj1mzqncsfJamEEf99Nk7IB0JpTMo5hS8rxB49FUktQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" defer src="./js/main.js"></script>
   </head>
   <body class="bg-black/50 text-white/70 min-h-screen">
@@ -22,7 +28,7 @@
         <p
           class="text-center font-bold font-mono p-2 rounded-md max-sm:text-base md:text-2xl"
         >
-          Group Two (2) - DSA104 Project <br />
+          Group Two (2) - CS104 Project <br />
           <span class="text-amber-300/90 font-arial italic">
             &quot;Music Playlist Manager&quot;
           </span>
@@ -30,6 +36,7 @@
       </div>
       <div
         class="currently_playing min-h-[25vh] flex justify-center items-center p-4"
+        id="controller"
       >
         <section
           class="w-full max-w-3xl rounded-lg bg-black/80 p-4 text-white shadow-xl"
@@ -49,28 +56,12 @@
               </p>
               <h2 class="truncate text-2xl font-extrabold">Midnight Drive</h2>
               <p class="text-sm text-white/70">Nova Ray • Electric Skies</p>
-
-              <div class="mt-4">
-                <div class="h-2 overflow-hidden rounded-full bg-white/20">
-                  <div class="h-full w-[42%] rounded-full bg-amber-300"></div>
-                </div>
-                <div class="mt-1 flex justify-between text-xs text-white/60">
-                  <span>1:42</span>
-                  <span>4:05</span>
-                </div>
-              </div>
             </div>
 
             <div
               class="flex items-center justify-center gap-3 sm:flex-col sm:gap-2"
               aria-label="Player controls"
             >
-              <button
-                class="grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-white/10 font-bold transition hover:bg-white/20"
-                aria-label="Previous song"
-              >
-                &lt;&lt;
-              </button>
               <button
                 class="grid h-12 w-12 place-items-center rounded-full bg-amber-300 text-xl font-extrabold text-black transition hover:bg-amber-200"
                 aria-label="Pause song"
@@ -81,7 +72,7 @@
                 class="grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-white/10 font-bold transition hover:bg-white/20"
                 aria-label="Next song"
               >
-                &gt;&gt;
+                &gt;|
               </button>
             </div>
           </div>
@@ -100,6 +91,7 @@
         <hr />
         <div
           class="song_container flex flex-col justify-center items-center gap-4 mt-2"
+          id="songContainer"
         >
           <div
             class="flex items-center gap-4 rounded-md bg-black/80 p-3 shadow-lg w-full"
@@ -178,5 +170,9 @@
       </p>
       <p class="text-xs underline text-right pr-3">Made with ❤ by CyberV</p>
     </footer>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

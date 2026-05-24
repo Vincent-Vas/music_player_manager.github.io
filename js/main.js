@@ -2,6 +2,10 @@ import { SongController } from "./classes/songController.class.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initApp();
+
+  function toggle() {
+    SongController.toggle();
+  }
 });
 
 const initApp = () => {
@@ -15,4 +19,12 @@ const initApp = () => {
 
   const addSongBtn = document.getElementById("addSongBtn");
   addSongBtn.addEventListener("click", SongController.addSongToPlaylist);
+};
+
+globalThis.toggle = function () {
+  SongController.toggle();
+};
+
+globalThis.playNextSong = function () {
+  SongController.playNextSong();
 };
